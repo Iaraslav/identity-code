@@ -1,0 +1,21 @@
+.code-info, .code-input {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.code-input input{
+    margin-left: 5px;
+    line-height: 20px;
+}
+.code-input button {
+    line-height: 20px;
+}
+.inline-button {
+    display: inline-block;
+}
+li {
+    margin-bottom: 15px;
+}
