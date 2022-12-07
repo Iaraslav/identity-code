@@ -164,21 +164,26 @@ function sexCalc(input_value) {
 
 function main1() {
     let input_value = document.getElementById("id-input").value;
-    let year = yearCheck(input_value);
-    let sliced = slicedCalc(input_value);
-    let result = lastCharCalc(sliced)
-    let lastChar = lastCharCheck(result)
-    let values = validCheck(input_value, lastChar, year);
-    let isvalid = values[0];
-    let errortype = values[1];
-    let sex = sexCalc(input_value);
-    let button = document.getElementById("age-button");
-    
-    displayParams(input_value, isvalid, errortype, sex, year);
-    button.addEventListener('click', function() {
-        ageCalc(year, input_value);
-    });
+    if (input_value.length === 11) {
+        let year = yearCheck(input_value);
+        let sliced = slicedCalc(input_value);
+        let result = lastCharCalc(sliced)
+        let lastChar = lastCharCheck(result)
+        let values = validCheck(input_value, lastChar, year);
+        let isvalid = values[0];
+        let errortype = values[1];
+        let sex = sexCalc(input_value);
+        let button = document.getElementById("age-button"); 
+
+        displayParams(input_value, isvalid, errortype, sex, year);
+        button.addEventListener('click', function() {
+            ageCalc(year, input_value);
+        });
+    } else {
+        displayParams(input_value, false, "ID should contain 11 characters", 0, 0)
+    }
 }
+
 
 function main2() {
     let input_value = document.getElementById("id-hatinput").value;
@@ -199,5 +204,3 @@ function main2() {
         document.getElementById("display-output").innerHTML = "Output: " + "Wrong ID format";
     }
 }
-
-// 121212A123F
