@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Identity Code</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="h1">
+        <h1>1. Personal Identity Code Checker</h1>
+    </div>
+    <div class="code-input">
+        <label for="id-input">Enter ID</label>
+        <input type="text" id="id-input" name="id-input" placeholder="e.g 010101-101A">
+        <button onclick="main1()">Confirm</button>
+    </div>
+    <div class="code-info">
+        <ul>
+            <li><span id="display-input">Input:</span></li>
+            <li><span id="display-valid">Is valid:</span></li>
+            <li><span id="display-sex">Sex:</span></li>
+            <li id="ageee">
+                <span id="display-age">Age:</span>
+                <span class="inline-button"><button id="age-button" style="display: none;">More specific</button><span>
+            </li>
+          </ul>  
+    </div>
+    <div class="h1">
+        <h1>2. Personal Identity Code Generator</h1>
+    </div>
+    <div class="code-input">
+        <label for="id-hatinput">Enter ID Hat</label>
+        <input type="text" id="id-hatinput" name="id-hatinput" placeholder="e.g 010101-101">
+        <button onclick="main2()">Confirm</button>
+    </div>
+    <div class="code-info">
+        <ul>
+            <li><span id="display-hatinput">Input:</span></li>
+            <li><span id="display-output">Output:</span></li>
+    </div>
+<script src="scripts/script.js"></script>
+</body>
+</html>
